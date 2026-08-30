@@ -1,0 +1,69 @@
+/* ===================================================
+   TECH STACK CAROUSEL / TICKER
+   =================================================== */
+
+.techSection {
+  width: 100%;
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+.sectionTitle{
+    padding-bottom: 1.5rem;
+}
+
+/* Contenedor principal con desvanecido a los lados */
+.tickerContainer {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  /* Mascara para difuminar los bordes izquierdo y derecho */
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 15%,
+    black 85%,
+    transparent
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 15%,
+    black 85%,
+    transparent
+  );
+}
+
+/* Pista que se desplaza */
+.tickerTrack {
+  display: flex;
+  gap: 1rem;
+  width: max-content;
+  animation: scrollTicker 20s linear infinite;
+}
+
+/* Pausa la animación cuando el usuario pasa el cursor encima */
+.tickerContainer:hover .tickerTrack {
+  animation-play-state: paused;
+}
+
+/* Estilo individual de las píldoras/badgets */
+.techBadge {
+  background: var(--bg-secondary, rgba(255, 255, 255, 0.05));
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0.5rem 1.25rem;
+  border-radius: 9999px;
+  font-size: 0.9rem;
+  color: var(--text-primary, #ffffff);
+  white-space: nowrap;
+}
+
+/* Animación del movimiento fluido */
+@keyframes scrollTicker {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%); /* Se desplaza la mitad para reiniciar el bucle */
+  }
+}

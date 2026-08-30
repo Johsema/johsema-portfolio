@@ -1,0 +1,46 @@
+.cardContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.videoWrapper {
+    width: 100%;
+    max-width: 250px; /* Limita el ancho máximo del recuadro */
+    aspect-ratio: 9 / 16; /* Fuerza la proporción vertical */
+    border-radius: 1rem;
+    overflow: hidden;
+    background-color: #000;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.videoElement {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Evita franjas negras y ajusta el video */
+    display: block;
+}
+
+.videoTitle {
+    margin-top: 0.5rem;
+    font-size: 0.875rem;
+    color: #e5e7eb;
+    text-align: center;
+}
+
+/* ===================================================
+   PANTALLA COMPLETA (Corrección para mantener 9:16)
+   =================================================== */
+
+/* Cuando el video entra en Fullscreen nativo del navegador */
+.videoElement:-webkit-full-screen {
+    object-fit: contain !important; /* Mantiene la proporción vertical y pone barras negras a los lados */
+    background-color: #000;
+}
+
+.videoElement:fullscreen {
+    object-fit: contain !important; /* Para navegadores estándar (Firefox, Chrome, Edge) */
+    background-color: #000;
+}

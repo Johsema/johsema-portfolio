@@ -1,0 +1,151 @@
+/* Hero Section */
+.hero {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.title {
+  font-size: 2rem;
+  line-height: 1.2;
+  margin-bottom: 0.6rem;
+}
+
+.title2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.highlight {
+  color: var(--accent-color);
+  display: block; /* En móvil se ve mejor si salta de línea */
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin: 0 auto 1.5rem;
+}
+
+.heroButtons {
+  display: flex;
+  flex-direction: column; /* En celular los botones van uno sobre otro */
+  gap: 0.75rem;
+  width: 100%;
+}
+
+.imageWrapper {
+    display: none;
+}
+
+
+.btnPrimary, .btnSecondary {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 0.85rem 1.25rem;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.btnPrimary {
+  background-color: var(--accent-color);
+  color: #0f172a;
+}
+
+.btnSecondary {
+  border: 1px solid var(--border-color);
+  background-color: transparent;
+  color: var(--text-primary);
+}
+
+/* ===================================================
+   MEDIA QUERIES (Puntos de quiebre para pantallas más grandes)
+   =================================================== */
+
+/* Tablets (min-width: 640px) */
+@media (min-width: 640px) {
+    .title {
+        font-size: 2.5rem;
+  }
+
+  .highlight {
+  display: inline; 
+}
+
+  .hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left; /* Asegura alineación general */
+    gap: 3rem;
+  }
+
+  /* NUEVO: Alineación a la izquierda para el bloque de texto */
+  .heroContent {
+    text-align: left;
+    flex: 1 1 55%;
+  }
+
+  .subtitle {
+    margin: 0 0 1.5rem 0; /* Quita el margin auto que centraba el texto */
+  }
+
+  .heroButtons {
+    flex-direction: row;
+    justify-content: flex-start; /* Alinea los botones a la izquierda */
+    width: auto;
+  }
+
+  .btnPrimary, .btnSecondary {
+    width: auto;
+  }
+
+  /* Imagen y contenedor */
+  .imageWrapper {
+    display: flex;
+    position: relative;
+    flex: 1 1 40%;
+    max-width: 360px;
+    border-radius: 16px;
+    overflow: hidden;
+    /* border: 1px solid rgba(255, 255, 255, 0.08); */
+  }
+
+  /* NUEVO: Degradado fundido al fondo negro en la parte inferior */
+  .imageOverlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 35%; /* Altura del fundido */
+    background: linear-gradient(to top, var(--bg-primary) 10%, transparent 100%);
+    pointer-events: none;
+  }
+}
+
+.profileImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center right; /* Centra la vista más hacia la derecha */
+  display: block;
+}
+
+
+/* Desktop (min-width: 1024px) */
+@media (min-width: 1024px) {
+  .title {
+    font-size: 3rem;
+  }
+
+  .highlight {
+    display: inline; 
+  }
+
+  .sectionTitle {
+    font-size: 1.8rem;
+  }
+
+}

@@ -1,0 +1,40 @@
+:root {
+  /* Fondo principal y secundario */
+  --bg-primary: #0a0a0a;       /* Negro profundo */
+  --bg-card: #121212;          /* Gris muy oscuro para tarjetas */
+  --bg-card-hover: #1c1c1c;    /* Gris oscuro para hover */
+
+  /* Textos */
+  --text-primary: #ffffff;     /* Blanco puro */
+  --text-secondary: #a1a1aa;   /* Gris medio para descripciones y subtítulos */
+
+  /* Acentos y Bordes */
+  --accent-color: #ffffff;     /* Blanco para destacados principales */
+  --accent-hover: #e4e4e7;     /* Blanco suave para hover */
+  --border-color: #27272a;     /* Gris oscuro para líneas de separación */
+  --border-highlight: #52525b; /* Gris claro para bordes interactivos */
+
+  /* Tipografía */
+  --font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-family);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
