@@ -100,10 +100,6 @@
   border: 1px solid #27272a;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
   background-color: #000000;
-
-  /* Elimina toques y selecciones grises en móviles */
-  -webkit-tap-highlight-color: transparent;
-  transform: translateZ(0); /* Fuerza aceleración por GPU */
 }
 
 .introVideo {
@@ -114,20 +110,8 @@
   border: none;
   outline: none;
   background-color: #000000;
-
-  /* Resetea bordes y sombras por defecto en WebViews */
-  -webkit-appearance: none;
-  appearance: none;
 }
 
-/* Oculta los controles del sistema en navegadores basados en WebKit/Blink si se llegan a renderizar */
-.introVideo::-webkit-media-controls {
-  display: none !important;
-}
-
-.introVideo::-webkit-media-controls-enclosure {
-  display: none !important;
-}
 
 /* ===================================================
    TABLETS & PANTALLAS MEDIANAS (min-width: 640px)
