@@ -1,4 +1,9 @@
+'use client';
 import Link from 'next/link';
+
+import { useLanguage } from './context/LanguageContext';
+import { CONTENT } from './components/data/ContentData';
+
 import Navbar from './components/common/Navbar';
 import styles from './page.module.css';
 import Hero from './components/home/Hero';
@@ -7,9 +12,9 @@ import ExpertiseSection from './components/home/ExpertiseSection';
 import FeaturedProjects from './components/home/FeaturedProjects';
 import ContactSection from './components/home/ContactSection';
 
-import { TECH_VIDEOS, BEAUTY_VIDEOS } from './components/data/ContentData';
-
 export default function Home() {
+  const { language } = useLanguage();
+  const content = CONTENT[language]; // Obtiene 'es' o 'en'
   return (
     <>
       <Navbar />
@@ -21,14 +26,14 @@ export default function Home() {
 
         {/* Seccion 1: Contenido Tech */}
         <ExpertiseSection 
-          sectionTitle="Tech & Unboxings" 
-          items={TECH_VIDEOS} 
+          sectionTitle={content.techSectionTitle}
+          items={content.techVideos} 
           />
 
         {/* Seccion 2: Contenido de Belleza */}
         <ExpertiseSection 
-          sectionTitle="Parfums & Personal Care" 
-          items={BEAUTY_VIDEOS} 
+          sectionTitle={content.beautySectionTitle}
+          items={content.beautyVideos} 
         />
         
         <FeaturedProjects />

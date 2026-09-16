@@ -13,10 +13,12 @@ export default function Footer() {
         <ul className={styles.links}>
           <li>
             <a 
-              href="mailto:johsematech@gmail.com" 
+              href="https://tiktok.com/@johsema" 
+              target="_blank" 
+              rel="noopener noreferrer" 
               className={styles.link}
             >
-              Email Contact
+              Johsema
             </a>
           </li>
 

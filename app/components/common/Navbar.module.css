@@ -38,6 +38,7 @@
 }
 
 .link {
+  
   color: var(--text-secondary);
   font-weight: 500;
   transition: color 0.2s ease;
@@ -49,6 +50,37 @@
 
 .barraName{
   color: rgb(54, 73, 247);
+}
+
+.langBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #1a1a1a;
+  color: #ffffff;
+  border: 1px solid #333333;
+  padding: 0.4rem 0.8rem;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.langBtn:hover {
+  background-color: #2a2a2a;
+  border-color: #555555;
+  transform: translateY(-1px);
+}
+
+.flag {
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.langText {
+  color: #e0e0e0;
+  letter-spacing: 0.5px;
 }
 
 /* Media Query Mobile First: Tablets y Pantallas Grandes */

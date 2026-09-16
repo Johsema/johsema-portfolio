@@ -1,151 +1,202 @@
 /* Hero Section */
+/* ===================================================
+   MOBILE-FIRST (Estilos base para smartphones)
+   =================================================== */
+
 .hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1rem 1rem 2.5rem 1rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
   text-align: center;
-  margin-bottom: 3rem;
+}
+
+.heroContent {
+  width: 100%;
+  max-width: 600px;
 }
 
 .title {
-  font-size: 2rem;
-  line-height: 1.2;
-  margin-bottom: 0.6rem;
-}
-
-.title2 {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.15;
+  margin-bottom: 0.5rem;
 }
 
 .highlight {
-  color: var(--accent-color);
-  display: block; /* En móvil se ve mejor si salta de línea */
+  color: #3b82f6; /* Color de acento */
 }
 
-.subtitle {
-  font-size: 1rem;
-  color: var(--text-secondary);
+.role {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #a1a1aa;
+  margin-bottom: 1rem;
+}
+
+.bio {
+  font-size: 0.95rem;
   line-height: 1.5;
-  margin: 0 auto 1.5rem;
+  color: #d4d4d8;
+  margin-bottom: 1.5rem;
 }
 
+/* Botones full-width en móviles pequeños */
 .heroButtons {
   display: flex;
-  flex-direction: column; /* En celular los botones van uno sobre otro */
+  flex-direction: column;
   gap: 0.75rem;
   width: 100%;
 }
 
-.imageWrapper {
-    display: none;
-}
-
-
-.btnPrimary, .btnSecondary {
-  display: block;
-  width: 100%;
-  text-align: center;
+.btnPrimary {
+  display: inline-block;
+  background-color: #ffffff;
+  color: #000000;
   padding: 0.85rem 1.25rem;
   border-radius: 8px;
   font-weight: 600;
-  transition: all 0.2s ease;
+  text-decoration: none;
+  text-align: center;
+  transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
-.btnPrimary {
-  background-color: var(--accent-color);
-  color: #0f172a;
+.btnPrimary:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
 }
 
 .btnSecondary {
-  border: 1px solid var(--border-color);
-  background-color: transparent;
-  color: var(--text-primary);
+  display: inline-block;
+  background-color: #18181b;
+  color: #ffffff;
+  border: 1px solid #27272a;
+  padding: 0.85rem 1.25rem;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  text-align: center;
+  transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
-/* ===================================================
-   MEDIA QUERIES (Puntos de quiebre para pantallas más grandes)
-   =================================================== */
-
-/* Tablets (min-width: 640px) */
-@media (min-width: 640px) {
-    .title {
-        font-size: 2.5rem;
-  }
-
-  .highlight {
-  display: inline; 
+.btnSecondary:hover {
+  background-color: #27272a;
+  transform: translateY(-2px);
 }
 
-  .hero {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    text-align: left; /* Asegura alineación general */
-    gap: 3rem;
-  }
+/* Contenedor del video vertical en móvil */
+.videoWrapper {
+  width: 100%;
+  max-width: 300px;
+  aspect-ratio: 9 / 16;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid #27272a;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  background-color: #000000;
 
-  /* NUEVO: Alineación a la izquierda para el bloque de texto */
-  .heroContent {
-    text-align: left;
-    flex: 1 1 55%;
-  }
-
-  .subtitle {
-    margin: 0 0 1.5rem 0; /* Quita el margin auto que centraba el texto */
-  }
-
-  .heroButtons {
-    flex-direction: row;
-    justify-content: flex-start; /* Alinea los botones a la izquierda */
-    width: auto;
-  }
-
-  .btnPrimary, .btnSecondary {
-    width: auto;
-  }
-
-  /* Imagen y contenedor */
-  .imageWrapper {
-    display: flex;
-    position: relative;
-    flex: 1 1 40%;
-    max-width: 360px;
-    border-radius: 16px;
-    overflow: hidden;
-    /* border: 1px solid rgba(255, 255, 255, 0.08); */
-  }
-
-  /* NUEVO: Degradado fundido al fondo negro en la parte inferior */
-  .imageOverlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 35%; /* Altura del fundido */
-    background: linear-gradient(to top, var(--bg-primary) 10%, transparent 100%);
-    pointer-events: none;
-  }
+  /* Elimina toques y selecciones grises en móviles */
+  -webkit-tap-highlight-color: transparent;
+  transform: translateZ(0); /* Fuerza aceleración por GPU */
 }
 
-.profileImage {
+.introVideo {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center right; /* Centra la vista más hacia la derecha */
   display: block;
+  border: none;
+  outline: none;
+  background-color: #000000;
+
+  /* Resetea bordes y sombras por defecto en WebViews */
+  -webkit-appearance: none;
+  appearance: none;
 }
 
+/* Oculta los controles del sistema en navegadores basados en WebKit/Blink si se llegan a renderizar */
+.introVideo::-webkit-media-controls {
+  display: none !important;
+}
 
-/* Desktop (min-width: 1024px) */
-@media (min-width: 1024px) {
+.introVideo::-webkit-media-controls-enclosure {
+  display: none !important;
+}
+
+/* ===================================================
+   TABLETS & PANTALLAS MEDIANAS (min-width: 640px)
+   =================================================== */
+@media (min-width: 640px) {
+  .heroButtons {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .btnPrimary,
+  .btnSecondary {
+    width: auto;
+  }
+}
+
+/* ===================================================
+   DESKTOP (min-width: 992px)
+   =================================================== */
+@media (min-width: 992px) {
+  .hero {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    padding: 0.2rem 2rem 3rem 2rem;
+    gap: 3rem;
+  }
+
+  .heroContent {
+    flex: 1;
+  }
+
   .title {
     font-size: 3rem;
   }
 
-  .highlight {
-    display: inline; 
+  .role {
+    font-size: 1.3rem;
   }
 
-  .sectionTitle {
-    font-size: 1.8rem;
+  .bio {
+    font-size: 1.05rem;
   }
 
+  .heroButtons {
+    justify-content: flex-start;
+  }
+
+  .videoWrapper {
+    max-width: 320px;
+    flex-shrink: 0;
+  }
+
+  /* Ajuste para navegadores estándar */
+.introVideo:fullscreen {
+  object-fit: contain !important;
+  background-color: #000000 !important;
+}
+
+/* Ajuste para navegadores Safari / WebKit / iOS */
+.introVideo:-webkit-full-screen {
+  object-fit: contain !important;
+  background-color: #000000 !important;
+}
+
+/* Ajuste para Firefox */
+.introVideo:-moz-full-screen {
+  object-fit: contain !important;
+  background-color: #000000 !important;
+}
 }

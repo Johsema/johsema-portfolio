@@ -16,6 +16,7 @@ export default function ProjectCard({
     demoUrl = '#',
     repoUrl = '#',
 }: ProjectProps) {
+    
     return (
         <div className={styles.projectCard}>
         <div>
