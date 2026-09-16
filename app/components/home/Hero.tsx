@@ -31,7 +31,6 @@ export default function Hero() {
             <video
             src={hero.introVideo}
             controls
-            muted
             loop
             playsInline
             // Propiedades adicionales para navegadores móviles e In-App Browsers:
