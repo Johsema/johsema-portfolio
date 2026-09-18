@@ -29,12 +29,6 @@ export default function Home() {
           sectionTitle={content.techSectionTitle}
           items={content.techVideos} 
           />
-
-        {/* Seccion 2: Contenido de Belleza */}
-        <ExpertiseSection 
-          sectionTitle={content.beautySectionTitle}
-          items={content.beautyVideos} 
-        />
         
         <FeaturedProjects />
         

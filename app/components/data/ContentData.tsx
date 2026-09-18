@@ -44,9 +44,7 @@ export interface ContentStructure {
     featuredProjects: FeaturedProjectsContent;
     contact: ContactSectionContent;
     techSectionTitle: string;
-    beautySectionTitle: string;
     techVideos: ExpertiseProps[];
-    beautyVideos: ExpertiseProps[];
 }
 
 export const CONTENT: Record<'es' | 'en', ContentStructure> = {
@@ -72,66 +70,42 @@ export const CONTENT: Record<'es' | 'en', ContentStructure> = {
             ],
         },
         techSectionTitle: 'Tech & Unboxings',
-        beautySectionTitle: 'Perfumes & Cuidado Personal',
         techVideos: [
+            {
+                videoSrc: 'https://res.cloudinary.com/rw4adlao/video/upload/v1789747892/OBSIDIAN.mp4',
+                title: 'OBSIDIAN',    
+            },
+            {
+                videoSrc: 'https://res.cloudinary.com/rw4adlao/video/upload/v1789747927/KDE-CONECT.mp4',
+                title: 'KDE CONECT',    
+            },
             {
                 videoSrc: 'https://res.cloudinary.com/rw4adlao/video/upload/v1788115537/smart_band_9_sin_musica.mp4',
                 title: 'Reseña del Xiaomi Smart Band 9',    
-            },
-            {
-                videoSrc: 'https://res.cloudinary.com/rw4adlao/video/upload/v1788117274/VN20260611_161109.mp4',
-                title: 'Tips de productividad en Xiaomi',
             },
             {
                 videoSrc: 'https://res.cloudinary.com/rw4adlao/video/upload/v1788121417/te_realme_buds_t110.mp4',
                 title: 'Reseña del Realme Buds T110',
             },
             {
-                videoSrc: 'https://res.cloudinary.com/rw4adlao/video/upload/v1788110466/PROYECTO_UNBOXING_-_3.mp4',
-                title: 'Redmi Pad 2 Pro Unboxing',
-                
-            },
-            {
                 videoSrc: 'https://res.cloudinary.com/rw4adlao/video/upload/v1788110468/wavekeys_unboxing_asmr_-_1.mp4',
                 title: 'Logitech Wavekeys ASMR Unboxing',
-            },
-        ] as ExpertiseProps[],
-        beautyVideos: [
-            {
-                videoSrc: 'https://res.cloudinary.com/rw4adlao/video/upload/v1788118836/co_zentro.mp4',
-                title: 'Eau de Parfum Zentro Review',
-            },
-            {
-                videoSrc: 'https://res.cloudinary.com/rw4adlao/video/upload/v1788118840/co_skincare.mp4',
-                title: 'Rutina de Cuidado Facial para Hombres',
-            },
-            {
-                videoSrc: 'https://res.cloudinary.com/rw4adlao/video/upload/v1788117804/VID_20260826_212311_660_bsl.mp4',
-                title: 'Reseña cinemática de las Chinelas Luofu',
-            },
-            {
-                videoSrc: 'https://res.cloudinary.com/rw4adlao/video/upload/v1788118833/co_bleu.mp4',
-                title: 'Reseña del Parfum Bleu Intense',
-            },
-            {
-                videoSrc: 'https://res.cloudinary.com/rw4adlao/video/upload/v1788120257/co_kalos.mp4',
-                title: 'Reseña: Eau de Toilette Kalos',
             },
         ] as ExpertiseProps[],
         featuredProjects: {
             sectionTitle: "Redes Sociales",
             projects: [
                 {
+                title: '📸 José María | UGC Creator',
+                description: 'Espacio donde comparto mi experiencia como creador UGC.',
+                tags: ['ugc', 'creador_ugc', 'contenido_ugc', ],
+                repoUrl: 'https://www.tiktok.com/@josemariaugc',
+                },
+                {
                 title: '📱 JohsemaTech / Tech Videos',
                 description: 'Espacio donde publico reseñas de tecnología y videos de unboxing.',
                 tags: ['contenido_tech', 'tiktok', 'reseñas', 'unboxing'],
                 repoUrl: 'https://www.tiktok.com/@johsematech',
-                },
-                {
-                title: '🍇 Lic. Parfum / Parfum Videos',
-                description: 'Espacio donde publico reseñas y análisis de perfumes y productos de cuidado personal.',
-                tags: ['perfumes', 'cuidado_personal', 'catálogo', 'reseñas'],
-                repoUrl: 'https://www.tiktok.com/@lic.parfum',
                 },
                 {
                 title: '📸 Johsema / Vlogs',
@@ -178,66 +152,42 @@ export const CONTENT: Record<'es' | 'en', ContentStructure> = {
             ],
         },
         techSectionTitle: 'Tech & Unboxings',
-        beautySectionTitle: 'Parfums and Personal Care',
         techVideos: [
             {
-                videoSrc: 'https://res.cloudinary.com/rw4adlao/video/upload/v1788115537/smart_band_9_sin_musica.mp4',
-                title: 'Xiaomi Smart Band 9 Review',    
+                videoSrc: 'https://res.cloudinary.com/rw4adlao/video/upload/v1789752991/OBSIDIANENGLISH.mp4',
+                title: 'OBSIDIAN',    
             },
             {
-                videoSrc: 'https://res.cloudinary.com/rw4adlao/video/upload/v1788117274/VN20260611_161109.mp4',
-                title: 'Tips de productividad en Xiaomi',
+                videoSrc: 'https://res.cloudinary.com/rw4adlao/video/upload/v1789753582/KDECONECTENGLISH.mp4',
+                title: 'KDE CONECT',    
+            },
+            {
+                videoSrc: 'https://res.cloudinary.com/rw4adlao/video/upload/v1788115537/smart_band_9_sin_musica.mp4',
+                title: 'Spanish Review: Xiaomi Smart Band 9',    
             },
             {
                 videoSrc: 'https://res.cloudinary.com/rw4adlao/video/upload/v1788121417/te_realme_buds_t110.mp4',
-                title: 'Realme Buds T110 Review',
-            },
-            {
-                videoSrc: 'https://res.cloudinary.com/rw4adlao/video/upload/v1788110466/PROYECTO_UNBOXING_-_3.mp4',
-                title: 'Redmi Pad 2 Pro Unboxing',
-                
+                title: 'Spanish Review: Realme Buds T110',
             },
             {
                 videoSrc: 'https://res.cloudinary.com/rw4adlao/video/upload/v1788110468/wavekeys_unboxing_asmr_-_1.mp4',
-                title: 'Logitech Wavekeys ASMR Unboxing',
-            },
-        ] as ExpertiseProps[],
-        beautyVideos: [
-            {
-                videoSrc: 'https://res.cloudinary.com/rw4adlao/video/upload/v1788118836/co_zentro.mp4',
-                title: 'Eau de Parfum Zentro Review',
-            },
-            {
-                videoSrc: 'https://res.cloudinary.com/rw4adlao/video/upload/v1788118840/co_skincare.mp4',
-                title: 'Skincare for Men',
-            },
-            {
-                videoSrc: 'https://res.cloudinary.com/rw4adlao/video/upload/v1788117804/VID_20260826_212311_660_bsl.mp4',
-                title: 'Chinelas Luofu Cinematic Review',
-            },
-            {
-                videoSrc: 'https://res.cloudinary.com/rw4adlao/video/upload/v1788118833/co_bleu.mp4',
-                title: 'Parfum Bleu Intense Review',
-            },
-            {
-                videoSrc: 'https://res.cloudinary.com/rw4adlao/video/upload/v1788120257/co_kalos.mp4',
-                title: 'Eau de Toilette Kalos Review',
+                title: 'ASMR Unboxing: Logitech Wavekeys ',
             },
         ] as ExpertiseProps[],
         featuredProjects: {
             sectionTitle: "Social Medias",
             projects: [
                 {
+                title: '📸 José María | UGC Creator',
+                description: 'A space where I share my experience as a UGC creator.',
+                tags: ['ugc', 'ugc_creator', 'ugc_content', ],
+                repoUrl: 'https://www.tiktok.com/@josemariaugc',
+                },
+                {
                 title: '📱 JohsemaTech / Tech Videos',
                 description: 'A space where I post tech reviews and unboxing videos.',
                 tags: ['tech_content', 'tiktok', 'review', 'unboxing'],
                 repoUrl: 'https://www.tiktok.com/@johsematech',
-                },
-                {
-                title: '🍇 Lic. Parfum / Parfum Videos',
-                description: 'A space where I post reviews and analyses of perfumes and personal care products.',
-                tags: ['parfum', 'personal_care', 'catalog', 'review'],
-                repoUrl: 'https://www.tiktok.com/@lic.parfum',
                 },
                 {
                 title: '📸 Johsema / Vlogs',

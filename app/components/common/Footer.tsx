@@ -13,6 +13,17 @@ export default function Footer() {
         <ul className={styles.links}>
           <li>
             <a 
+              href="https://tiktok.com/@josemariaugc" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className={styles.link}
+            >
+              José María UGC
+            </a>
+          </li>
+          
+          <li>
+            <a 
               href="https://tiktok.com/@johsema" 
               target="_blank" 
               rel="noopener noreferrer" 
@@ -29,18 +40,7 @@ export default function Footer() {
               rel="noopener noreferrer" 
               className={styles.link}
             >
-              Johsematech
-            </a>
-          </li>
-          
-          <li>
-            <a 
-              href="https://tiktok.com/@lic.parfum" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className={styles.link}
-            >
-              Lic. Parfum
+              JohsemaTech
             </a>
           </li>
           
